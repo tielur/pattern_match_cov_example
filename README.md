@@ -1,21 +1,20 @@
 # PatternMatchCovExample
 
-**TODO: Add description**
+Dialzyer will show a `pattern_match_cov` warning when a function signature isn't being used.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `pattern_match_cov_example` to your list of dependencies in `mix.exs`:
+`mix deps.get`
+`mix dialyzer`
 
 ```elixir
-def deps do
-  [
-    {:pattern_match_cov_example, "~> 0.1.0"}
-  ]
-end
-```
+Total errors: 1, Skipped: 0
+done in 0m1.06s
+lib/pattern_match_cov_example.ex:11:pattern_match_cov
+The pattern
+variableVlist
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/pattern_match_cov_example](https://hexdocs.pm/pattern_match_cov_example).
+can never match since previous clauses completely cover the type
+%{:test => <<_::32>>}
+________________________________________________________________________________
+done (warnings were emitted)
+```
 
