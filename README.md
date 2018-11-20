@@ -3,6 +3,7 @@
 Dialzyer will show a `pattern_match_cov` warning when a function signature isn't being used.
 
 `mix deps.get`
+
 `mix dialyzer`
 
 ```elixir
